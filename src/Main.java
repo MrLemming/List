@@ -32,17 +32,11 @@ public class Main {
                         break;
 
                     case 2:
-                        System.out.println("Список покупок:");
-                        for (int i = 0; i < purchases.size(); i++) {
-                            System.out.println((i + 1) + " " + purchases.get(i));
-                        }
+                        shoppingList(purchases);
                         break;
 
                     case 3:
-                        System.out.println("Список покупок:");
-                        for (int i = 0; i < purchases.size(); i++) {
-                            System.out.println((i + 1) + " " + purchases.get(i));
-                        }
+                        shoppingList(purchases);
                         System.out.println("Какую хотите удалить? Введите номер или название:");
                         input = scanner.nextLine();
                         int numberProduct;
@@ -72,6 +66,13 @@ public class Main {
                         break;
                 }
             }
+        }
+    }
+
+    private static void shoppingList(List<String> ArrayList) {
+        System.out.println("Список покупок:");
+        for (int i = 0; i < ArrayList.size(); i++) {
+            System.out.println((i + 1) + " " + ArrayList.get(i));
         }
     }
 }
